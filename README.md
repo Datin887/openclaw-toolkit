@@ -15,6 +15,7 @@
 | **browser-cdp** | Headless browser via CDP (Chrome DevTools Protocol). Navigation, screenshots, JS execution, clicks, form filling. No GUI needed — perfect for servers. [Details ↓](#browser-cdp) | [SKILL.md](skills/browser-cdp/SKILL.md) |
 | **nemotron-vision** | Multimodal image analysis via Nemotron-Omni. Analyze screenshots, charts, photos, documents. Extract text, describe visuals, read diagrams. [Details ↓](#nemotron-vision) | [SKILL.md](skills/nemotron-vision/SKILL.md) |
 | **fire_copywriting_engine** | High-converting sales copy using proven direct-response techniques. Rewrite marketing text, sales pages, emails, landing pages, ads. Based on Ogilvy, Sugarman, Settle, Kennedy, Carlton and others. [Details ↓](#fire_copywriting_engine) | [SKILL.md](skills/fire_copywriting_engine/SKILL.md) |
+| **deep_audience_analysis_premium** | Deep psychological analysis of target audience. Customer personas, pains, fears, desires, JTBD, objections, transformation, marketing angles. 21-section framework. [Details ↓](#deep_audience_analysis_premium) | [SKILL.md](skills/deep_audience_analysis_premium/SKILL.md) |
 
 ### Themes
 
@@ -132,6 +133,28 @@ Or trigger with: "огненный текст", "продающий текст",
 
 **Full docs:** [skills/fire_copywriting_engine/SKILL.md](skills/fire_copywriting_engine/SKILL.md)
 
+### deep_audience_analysis_premium
+
+**Deep psychological analysis of target audience — 21-section framework.**
+
+**Features:**
+- 🧠 Deep customer psychology — pains, fears, desires, shame, guilt, envy
+- 📐 21-section analysis framework — from persona to marketing conclusions
+- 💬 Customer's own language — authentic quotes and internal monologues
+- 🎯 JTBD analysis — functional, emotional, social, hidden jobs
+- 🚧 Objection handling — what blocks the purchase and why
+- ✨ Transformation mapping — before/after customer journey
+
+**Output sections:** Summary, Persona, Psychographics, Core Problem, JTBD, Top-5 Emotions, Top-5 Fears, Relationship Impact, Painful Phrases, Past Solutions, Resistance Points, Ideal Transformation, Post-Transformation Quotes, Myths & Beliefs, Blame Patterns, Sticking Points, What to Let Go, Top-5 Objections, Purchase Triggers, Marketing Conclusions, Hypotheses.
+
+**Quick start:**
+```
+Provide product info, market, audience segments, competitors, positioning, sales channels, and analysis goal.
+Or just describe your product and ask: "Сделай глубокий анализ ЦА"
+```
+
+**Full docs:** [skills/deep_audience_analysis_premium/SKILL.md](skills/deep_audience_analysis_premium/SKILL.md)
+
 ---
 
 ## 🎨 Themes
@@ -169,7 +192,11 @@ openclaw-toolkit/
 │   │   ├── SKILL.md
 │   │   └── scripts/
 │   │       └── nemotron_vision.py
-│   └── fire_copywriting_engine/
+│   ├── fire_copywriting_engine/
+│   │   ├── SKILL.md
+│   │   └── references/
+│   │       └── system_prompt.md
+│   └── deep_audience_analysis_premium/
 │       ├── SKILL.md
 │       └── references/
 │           └── system_prompt.md
