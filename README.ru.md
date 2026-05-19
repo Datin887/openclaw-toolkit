@@ -12,6 +12,12 @@
 |-------|----------|-----------|
 | **browser-cdp** | Headless браузер через CDP (Chrome DevTools Protocol). Навигация, скриншоты, JS-выполнение, клики, заполнение форм. Работает без GUI — идеально для серверов. | [Подробнее ↓](#browser-cdp) |
 
+### Темы (Themes)
+
+| Тема | Описание | Установка |
+|------|----------|-----------|
+| **Laguna** | Тёплый кремовый + фиолетовый (светлая) / глубокий чёрный + голубой (тёмная). Шрифт Inter, бруталистские тени. С [tweakcn.com](https://tweakcn.com/themes/cmpc347ze000204l580xtaqet). | [INSTALL.md](themes/laguna/INSTALL.md) |
+
 ---
 
 ## 🚀 Быстрая установка
@@ -80,16 +86,38 @@ python3 scripts/browser_cdp.py evaluate "document.title"
 
 ---
 
+## 🎨 Темы
+
+### Laguna
+
+Красивая тема с [tweakcn.com](https://tweakcn.com/themes/cmpc347ze000204l580xtaqet).
+
+| Режим | Описание |
+|-------|----------|
+| Светлая | Тёплый кремовый фон, фиолетовый акцент, шрифт Inter |
+| Тёмная | Глубокий чёрный фон, голубой акцент, бруталистские тени |
+
+**Статус:** ⚠️ OpenClaw пока не имеет встроенного импорта из tweakcn. Тема сохранена здесь и готова к использованию. См. [INSTALL.md](themes/laguna/INSTALL.md).
+
+---
+
 ## 📁 Структура
 
 ```
 openclaw-toolkit/
-├── README.md              ← Ты здесь
+├── README.md              ← English version
+├── README.ru.md           ← Ты здесь
+├── LICENSE
 ├── skills/                ← Навыки для OpenClaw
 │   └── browser-cdp/
 │       ├── SKILL.md
 │       └── scripts/
 │           └── browser_cdp.py
+├── themes/                ← Темы для Control UI
+│   └── laguna/
+│       ├── theme.json
+│       ├── theme.css
+│       └── INSTALL.md
 ├── scripts/               ← Вспомогательные скрипты
 ├── configs/               ← Шаблоны конфигураций
 └── docs/                  ← Документация

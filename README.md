@@ -14,6 +14,12 @@
 |-------|-------------|---------|
 | **browser-cdp** | Headless browser via CDP (Chrome DevTools Protocol). Navigation, screenshots, JS execution, clicks, form filling. No GUI needed — perfect for servers. [Details ↓](#browser-cdp) | [SKILL.md](skills/browser-cdp/SKILL.md) |
 
+### Themes
+
+| Theme | Description | Install |
+|-------|-------------|---------|
+| **Laguna** | Warm cream + purple (light) / deep black + cyan (dark). Inter font, brutalist shadows. From [tweakcn.com](https://tweakcn.com/themes/cmpc347ze000204l580xtaqet). [Details ↓](#laguna-theme) | [INSTALL.md](themes/laguna/INSTALL.md) |
+
 ---
 
 ## 🚀 Quick Install
@@ -82,6 +88,25 @@ python3 scripts/browser_cdp.py evaluate "document.title"
 
 ---
 
+## 🎨 Themes
+
+### Laguna Theme
+
+A beautiful theme from [tweakcn.com](https://tweakcn.com/themes/cmpc347ze000204l580xtaqet).
+
+| Mode | Description |
+|------|-------------|
+| Light | Warm cream background, purple accent, Inter font |
+| Dark | Deep black background, cyan-blue accent, brutalist shadows |
+
+**Status:** ⚠️ OpenClaw doesn't have native tweakcn import yet. The theme is preserved here and ready to use when the feature ships. See [INSTALL.md](themes/laguna/INSTALL.md) for manual options.
+
+**Files:**
+- `themes/laguna/theme.json` — original tweakcn payload
+- `themes/laguna/theme.css` — converted CSS custom properties
+
+---
+
 ## 📁 Structure
 
 ```
@@ -94,6 +119,11 @@ openclaw-toolkit/
 │       ├── SKILL.md
 │       └── scripts/
 │           └── browser_cdp.py
+├── themes/                ← Control UI themes
+│   └── laguna/
+│       ├── theme.json
+│       ├── theme.css
+│       └── INSTALL.md
 ├── scripts/               ← Utility scripts
 ├── configs/               ← Config templates
 └── docs/                  ← Documentation
