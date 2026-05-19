@@ -21,8 +21,8 @@ This repo preserves the theme data so it's ready when the feature ships.
 
 ### Method 1: Via Control UI (future)
 
-1. Open OpenClaw Control UI → Settings → Theme
-2. Click "Import from tweakcn"
+1. Open OpenClaw Control UI → Settings → Appearance → Theme
+2. Find "Theme link or ID"
 3. Paste URL: `https://tweakcn.com/themes/cmpc347ze000204l580xtaqet`
 4. Choose mode: Light / Dark / System
 
