@@ -2,14 +2,6 @@
 
 A beautiful theme from [tweakcn.com](https://tweakcn.com/themes/cmpc347ze000204l580xtaqet).
 
-## Current Status
-
-⚠️ **Work in progress** — OpenClaw doesn't yet have a native "import from tweakcn" UI button.
-The spec exists ([docs](https://docs.openclaw.ai/superpowers/specs/2026-04-22-tweakcn-custom-theme-import-design)),
-but it's not implemented yet.
-
-This repo preserves the theme data so it's ready when the feature ships.
-
 ## Preview
 
 | Mode | Description |
@@ -17,9 +9,9 @@ This repo preserves the theme data so it's ready when the feature ships.
 | Light | Warm cream background (`#F5F0E8`), purple accent, Inter font |
 | Dark | Deep black background, cyan-blue accent, brutalist shadows |
 
-## How to Install (when OpenClaw supports it)
+## How to Install 
 
-### Method 1: Via Control UI (future)
+### Method 1: Via Control UI
 
 1. Open OpenClaw Control UI → Settings → Appearance → Theme
 2. Find "Theme link or ID"
@@ -28,7 +20,7 @@ This repo preserves the theme data so it's ready when the feature ships.
 
 ### Method 2: Manual CSS injection (advanced)
 
-If you want to apply it right now, you can inject the CSS manually:
+Or, you can inject the CSS manually:
 
 1. Copy `theme.css` to your OpenClaw webchat host
 2. Add to your page:
