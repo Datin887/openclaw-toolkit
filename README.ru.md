@@ -97,7 +97,7 @@ python3 scripts/browser_cdp.py evaluate "document.title"
 | Светлая | Тёплый кремовый фон, фиолетовый акцент, шрифт Inter |
 | Тёмная | Глубокий чёрный фон, голубой акцент, бруталистские тени |
 
-**Статус:** ⚠️ OpenClaw пока не имеет встроенного импорта из tweakcn. Тема сохранена здесь и готова к использованию. См. [INSTALL.md](themes/laguna/INSTALL.md).
+См. [INSTALL.md](themes/laguna/INSTALL.md).
 
 ---
 
