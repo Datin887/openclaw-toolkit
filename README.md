@@ -16,6 +16,7 @@
 | **nemotron-vision** | Multimodal image analysis via Nemotron-Omni. Analyze screenshots, charts, photos, documents. Extract text, describe visuals, read diagrams. [Details ↓](#nemotron-vision) | [SKILL.md](skills/nemotron-vision/SKILL.md) |
 | **fire_copywriting_engine** | High-converting sales copy using proven direct-response techniques. Rewrite marketing text, sales pages, emails, landing pages, ads. Based on Ogilvy, Sugarman, Settle, Kennedy, Carlton and others. [Details ↓](#fire_copywriting_engine) | [SKILL.md](skills/fire_copywriting_engine/SKILL.md) |
 | **deep_audience_analysis_premium** | Deep psychological analysis of target audience. Customer personas, pains, fears, desires, JTBD, objections, transformation, marketing angles. 21-section framework. [Details ↓](#deep_audience_analysis_premium) | [SKILL.md](skills/deep_audience_analysis_premium/SKILL.md) |
+| **offer_copy_pipeline_premium** | High-converting offers, headlines, hooks, and sales copy based on audience analysis. Full marketing pipeline: angles → offers → big ideas → headlines → hooks → copy → CTAs. Platform adaptation. [Details ↓](#offer_copy_pipeline_premium) | [SKILL.md](skills/offer_copy_pipeline_premium/SKILL.md) |
 
 ### Themes
 
@@ -155,6 +156,29 @@ Or just describe your product and ask: "Сделай глубокий анали
 
 **Full docs:** [skills/deep_audience_analysis_premium/SKILL.md](skills/deep_audience_analysis_premium/SKILL.md)
 
+### offer_copy_pipeline_premium
+
+**High-converting offers, headlines, hooks, and sales copy based on audience analysis.**
+
+**Features:**
+- 🎯 Full marketing pipeline: angles → offers → big ideas → headlines → hooks → copy → CTAs
+- 📊 5-10 marketing angles per analysis
+- 💡 5-10 offers with mechanics, value, risk reversal
+- ✍️ 15 headlines + 10 subheaders + 10-15 hooks
+- 📝 Short, medium, hero block, email, 5 CTAs
+- 📱 Platform adaptation: Meta Ads, Google Ads, Telegram, Instagram, email, VSL
+- 🚧 Objection handling built into copy
+
+**Works with:** Output from `deep_audience_analysis_premium` or raw product/audience data.
+
+**Quick start:**
+```
+Provide product info + audience analysis (or just describe your product and audience).
+Ask: "Сделай офферы и копирайт" or "Create offers and sales copy"
+```
+
+**Full docs:** [skills/offer_copy_pipeline_premium/SKILL.md](skills/offer_copy_pipeline_premium/SKILL.md)
+
 ---
 
 ## 🎨 Themes
@@ -196,7 +220,11 @@ openclaw-toolkit/
 │   │   ├── SKILL.md
 │   │   └── references/
 │   │       └── system_prompt.md
-│   └── deep_audience_analysis_premium/
+│   ├── deep_audience_analysis_premium/
+│   │   ├── SKILL.md
+│   │   └── references/
+│   │       └── system_prompt.md
+│   └── offer_copy_pipeline_premium/
 │       ├── SKILL.md
 │       └── references/
 │           └── system_prompt.md

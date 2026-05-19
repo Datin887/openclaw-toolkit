@@ -13,6 +13,7 @@
 | **browser-cdp** | Headless браузер через CDP (Chrome DevTools Protocol). Навигация, скриншоты, JS-выполнение, клики, заполнение форм. Работает без GUI — идеально для серверов. | [Подробнее ↓](#browser-cdp) |
 | **fire_copywriting_engine** | Огненные продающие тексты по проверенным техникам директ-риспонса. Рерайт маркетинговых текстов, лендингов, писем, рекламы. На основе Ogilvy, Sugarman, Settle, Kennedy, Carlton и других. | [Подробнее ↓](#fire_copywriting_engine) |
 | **deep_audience_analysis_premium** | Глубокий психологический анализ целевой аудитории. Профиль клиента, боли, страхи, желания, JTBD, возражения, трансформация, маркетинговые углы. 21 секция анализа. | [Подробнее ↓](#deep_audience_analysis_premium) |
+| **offer_copy_pipeline_premium** | Конверсионные офферы, заголовки, хуки и продающие тексты на основе анализа ЦА. Полный маркетинговый пайплайн: углы → офферы → big ideas → заголовки → хуки → копирайт → CTA. Адаптация под площадки. | [Подробнее ↓](#offer_copy_pipeline_premium) |
 
 ### Темы (Themes)
 
@@ -131,6 +132,29 @@ python3 scripts/browser_cdp.py evaluate "document.title"
 
 **Полная документация:** [skills/deep_audience_analysis_premium/SKILL.md](skills/deep_audience_analysis_premium/SKILL.md)
 
+### offer_copy_pipeline_premium
+
+**Конверсионные офферы, заголовки, хуки и продающие тексты на основе анализа ЦА.**
+
+**Что умеет:**
+- 🎯 Полный маркетинговый пайплайн: углы → офферы → big ideas → заголовки → хуки → копирайт → CTA
+- 📊 5-10 маркетинговых углов на анализ
+- 💡 5-10 офферов с механикой, ценностью, снижением риска
+- ✍️ 15 заголовков + 10 подзаголовков + 10-15 хуков
+- 📝 Короткий, средний, hero-блок, email, 5 CTA
+- 📱 Адаптация под площадки: Meta Ads, Google Ads, Telegram, Instagram, email, VSL
+- 🚧 Работа с возражениями встроена в копирайт
+
+**Работает с:** Выходными данными `deep_audience_analysis_premium` или сырыми данными о продукте/аудитории.
+
+**Быстрый старт:**
+```
+Предоставь информацию о продукте + анализ ЦА (или просто опиши продукт и аудиторию).
+Спроси: "Сделай офферы и копирайт" или "Create offers and sales copy"
+```
+
+**Полная документация:** [skills/offer_copy_pipeline_premium/SKILL.md](skills/offer_copy_pipeline_premium/SKILL.md)
+
 ---
 
 ## 🎨 Темы
@@ -168,7 +192,11 @@ openclaw-toolkit/
 │   │   ├── SKILL.md
 │   │   └── references/
 │   │       └── system_prompt.md
-│   └── deep_audience_analysis_premium/
+│   ├── deep_audience_analysis_premium/
+│   │   ├── SKILL.md
+│   │   └── references/
+│   │       └── system_prompt.md
+│   └── offer_copy_pipeline_premium/
 │       ├── SKILL.md
 │       └── references/
 │           └── system_prompt.md
