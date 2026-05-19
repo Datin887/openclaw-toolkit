@@ -11,7 +11,7 @@
 | Навык | Описание | Установка |
 |-------|----------|-----------|
 | **browser-cdp** | Headless браузер через CDP (Chrome DevTools Protocol). Навигация, скриншоты, JS-выполнение, клики, заполнение форм. Работает без GUI — идеально для серверов. | [Подробнее ↓](#browser-cdp) |
-| **nemotron-vision** | Мультимодальный анализ изображений через Nemotron-Omni. Анализ скриншотов, графиков, фото, документов. Извлечение текста, описание визуалов. | [Подробнее ↓](#nemotron-vision) |
+| **fire_copywriting_engine** | Огненные продающие тексты по проверенным техникам директ-риспонса. Рерайт маркетинговых текстов, лендингов, писем, рекламы. На основе Ogilvy, Sugarman, Settle, Kennedy, Carlton и других. | [Подробнее ↓](#fire_copywriting_engine) |
 
 ### Темы (Themes)
 
@@ -85,24 +85,28 @@ python3 scripts/browser_cdp.py evaluate "document.title"
 
 **Полная документация:** [skills/browser-cdp/SKILL.md](skills/browser-cdp/SKILL.md)
 
-### nemotron-vision
+### fire_copywriting_engine
 
-**Мультимодальный анализ изображений через Nemotron-Omni (бесплатно на OpenRouter).**
+**Огненные продающие тексты по техникам директ-риспонса.**
 
-**Возможности:**
-- 📊 Анализ графиков и диаграмм — извлечение значений, меток, трендов
-- 📸 Описание фотографий — объекты, сцены, люди
-- 📄 OCR документов — извлечение текста с сохранением структуры
-- 🖥️ Анализ UI-скриншотов — описание лейаута и элементов
+**Что умеет:**
+- 🔥 Превращает сухие тексты в убедительные продающие
+- 🧠 Психологическое сканирование — определяет боли, страхи, желания ЦА
+- 📐 Структура AIDA — Внимание, Интерес, Желание, Действие
+- 💬 Разговорный стиль — как друг, а не корпорация
+- 🎬 Кинематографичный сторителлинг — показывай, а не рассказывай
+- 📊 Фактологический фундамент — подтверждай обещания данными
+- ⚡ Ударный CTA — бескомпромиссный призыв к действию
 
-**Модель:** `nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free` (256K контекст)
+**Алгоритмы:** Sugarman/Bencivenga, Ogilvy, Ben Settle, Haddad/Godin, Kennedy/Bly, Carlton, Makepeace
 
 **Быстрый старт:**
-```bash
-python3 scripts/nemotron_vision.py chart.png "Опиши этот график" --lang ru
+```
+Пришли исходный текст и попроси переписать как огненный продающий.
+Или триггерь: "огненный текст", "продающий текст", "копирайтинг"
 ```
 
-**Полная документация:** [skills/nemotron-vision/SKILL.md](skills/nemotron-vision/SKILL.md)
+**Полная документация:** [skills/fire_copywriting_engine/SKILL.md](skills/fire_copywriting_engine/SKILL.md)
 
 ---
 
@@ -126,39 +130,30 @@ python3 scripts/nemotron_vision.py chart.png "Опиши этот график" 
 ```
 openclaw-toolkit/
 ├── README.md              ← English version
-├── README.ru.md           ← Ты здесь (русский)
-├── LICENSE                ← MIT License
-│
+├── README.ru.md           ← Ты здесь
+├── LICENSE
 ├── skills/                ← Навыки для OpenClaw
-│   ├── browser-cdp/       ← Headless браузер через CDP
-│   │   ├── SKILL.md       ← Документация навыка
+│   ├── browser-cdp/
+│   │   ├── SKILL.md
 │   │   └── scripts/
-│   │       └── browser_cdp.py   ← CDP-хелпер (навигация, скриншоты, JS)
-│   └── nemotron-vision/   ← Мультимодальный анализ изображений
-│       ├── SKILL.md       ← Документация навыка
-│       └── scripts/
-│           └── nemotron_vision.py  ← CLI для анализа изображений
-│
+│   │       └── browser_cdp.py
+│   ├── nemotron-vision/
+│   │   ├── SKILL.md
+│   │   └── scripts/
+│   │       └── nemotron_vision.py
+│   └── fire_copywriting_engine/
+│       ├── SKILL.md
+│       └── references/
+│           └── system_prompt.md
 ├── themes/                ← Темы для Control UI
-│   └── laguna/            ← Тема Laguna с tweakcn.com
-│       ├── theme.json     ← Оригинальный payload tweakcn
-│       ├── theme.css      ← CSS-переменные (светлая + тёмная)
-│       └── INSTALL.md     ← Инструкция по установке
-│
+│   └── laguna/
+│       ├── theme.json
+│       ├── theme.css
+│       └── INSTALL.md
 ├── scripts/               ← Вспомогательные скрипты
 ├── configs/               ← Шаблоны конфигураций
-└── docs/                  ← Дополнительная документация
+└── docs/                  ← Документация
 ```
-
-### Описание директорий
-
-| Директория | Назначение |
-|------------|------------|
-| `skills/` | Навыки для OpenClaw — каждая подпапка это самодостаточный навык с `SKILL.md` и скриптами |
-| `themes/` | Темы для Control UI — JSON/CSS темы для веб-интерфейса OpenClaw |
-| `scripts/` | Автономные скрипты (статус агента, сборщики логов, утилиты) |
-| `configs/` | Шаблоны конфигураций и примеры настройки OpenClaw |
-| `docs/` | Дополнительная документация, гайды и заметки |
 
 ## 📜 Лицензия
 

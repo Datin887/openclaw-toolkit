@@ -14,6 +14,7 @@
 |-------|-------------|---------|
 | **browser-cdp** | Headless browser via CDP (Chrome DevTools Protocol). Navigation, screenshots, JS execution, clicks, form filling. No GUI needed — perfect for servers. [Details ↓](#browser-cdp) | [SKILL.md](skills/browser-cdp/SKILL.md) |
 | **nemotron-vision** | Multimodal image analysis via Nemotron-Omni. Analyze screenshots, charts, photos, documents. Extract text, describe visuals, read diagrams. [Details ↓](#nemotron-vision) | [SKILL.md](skills/nemotron-vision/SKILL.md) |
+| **fire_copywriting_engine** | High-converting sales copy using proven direct-response techniques. Rewrite marketing text, sales pages, emails, landing pages, ads. Based on Ogilvy, Sugarman, Settle, Kennedy, Carlton and others. [Details ↓](#fire_copywriting_engine) | [SKILL.md](skills/fire_copywriting_engine/SKILL.md) |
 
 ### Themes
 
@@ -108,6 +109,29 @@ Or via `image` tool with model override.
 
 **Full docs:** [skills/nemotron-vision/SKILL.md](skills/nemotron-vision/SKILL.md)
 
+### fire_copywriting_engine
+
+**Fire sales copy using proven direct-response techniques.**
+
+**Features:**
+- 🔥 Rewrite dry text into persuasive, converting copy
+- 🧠 Psychological profiling — identify pains, fears, desires of target audience
+- 📐 AIDA structure — Attention, Interest, Desire, Action
+- 💬 Conversational style — talk like a friend, not a corporation
+- 🎬 Cinematographic storytelling — show, don't tell
+- 📊 Fact-based persuasion — back claims with data and social proof
+- ⚡ Killer CTA — uncompromising call to action
+
+**Algorithms:** Sugarman/Bencivenga, Ogilvy, Ben Settle, Haddad/Godin, Kennedy/Bly, Carlton, Makepeace
+
+**Quick start:**
+```
+Just send your source text and ask to rewrite it as fire copy.
+Or trigger with: "огненный текст", "продающий текст", "копирайтинг"
+```
+
+**Full docs:** [skills/fire_copywriting_engine/SKILL.md](skills/fire_copywriting_engine/SKILL.md)
+
 ---
 
 ## 🎨 Themes
@@ -133,40 +157,31 @@ See [INSTALL.md](themes/laguna/INSTALL.md) for manual options.
 
 ```
 openclaw-toolkit/
-├── README.md              ← You are here (English)
+├── README.md              ← You are here
 ├── README.ru.md           ← Russian version
-├── LICENSE                ← MIT License
-│
-├── skills/                ← OpenClaw agent skills
-│   ├── browser-cdp/       ← Headless browser automation via CDP
-│   │   ├── SKILL.md       ← Skill documentation
+├── LICENSE
+├── skills/                ← OpenClaw skills
+│   ├── browser-cdp/
+│   │   ├── SKILL.md
 │   │   └── scripts/
-│   │       └── browser_cdp.py   ← CDP helper (navigate, screenshot, evaluate JS)
-│   └── nemotron-vision/   ← Multimodal image analysis via Nemotron-Omni
-│       ├── SKILL.md       ← Skill documentation
-│       └── scripts/
-│           └── nemotron_vision.py  ← CLI for image analysis (charts, photos, OCR)
-│
+│   │       └── browser_cdp.py
+│   ├── nemotron-vision/
+│   │   ├── SKILL.md
+│   │   └── scripts/
+│   │       └── nemotron_vision.py
+│   └── fire_copywriting_engine/
+│       ├── SKILL.md
+│       └── references/
+│           └── system_prompt.md
 ├── themes/                ← Control UI themes
-│   └── laguna/            ← Laguna theme from tweakcn.com
-│       ├── theme.json     ← Original tweakcn payload (source of truth)
-│       ├── theme.css      ← Converted CSS custom properties (light + dark)
-│       └── INSTALL.md     ← Installation instructions
-│
-├── scripts/               ← Utility scripts (agent status, collectors, etc.)
-├── configs/               ← Config templates and examples
-└── docs/                  ← Additional documentation
+│   └── laguna/
+│       ├── theme.json
+│       ├── theme.css
+│       └── INSTALL.md
+├── scripts/               ← Utility scripts
+├── configs/               ← Config templates
+└── docs/                  ← Documentation
 ```
-
-### Directory Descriptions
-
-| Directory | Purpose |
-|-----------|---------|
-| `skills/` | OpenClaw agent skills — each subfolder is a self-contained skill with `SKILL.md` and optional scripts |
-| `themes/` | Control UI themes — JSON/CSS themes for OpenClaw webchat interface |
-| `scripts/` | Standalone utility scripts (agent status, log collectors, helpers) |
-| `configs/` | Configuration templates and examples for OpenClaw setup |
-| `docs/` | Additional documentation, guides, and notes |
 
 ## 🤝 Contributing
 
