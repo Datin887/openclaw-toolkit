@@ -99,7 +99,7 @@ A beautiful theme from [tweakcn.com](https://tweakcn.com/themes/cmpc347ze000204l
 | Light | Warm cream background, purple accent, Inter font |
 | Dark | Deep black background, cyan-blue accent, brutalist shadows |
 
-**Status:** ⚠️ OpenClaw doesn't have native tweakcn import yet. The theme is preserved here and ready to use when the feature ships. See [INSTALL.md](themes/laguna/INSTALL.md) for manual options.
+See [INSTALL.md](themes/laguna/INSTALL.md) for manual options.
 
 **Files:**
 - `themes/laguna/theme.json` — original tweakcn payload
