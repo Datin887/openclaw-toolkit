@@ -1,98 +1,108 @@
 # 🛠️ OpenClaw Toolkit
 
-> Модульный набор навыков, скриптов и конфигураций для [OpenClaw](https://github.com/openclaw/openclaw) — AI-агент платформы.
+> Modular collection of skills, scripts, and configs for [OpenClaw](https://github.com/openclaw/openclaw) — an open-source AI agent platform.
 
-## 📦 Содержимое
-
-### Навыки (Skills)
-
-| Навык | Описание | Установка |
-|-------|----------|-----------|
-| **browser-cdp** | Headless браузер через CDP (Chrome DevTools Protocol). Навигация, скриншоты, JS-выполнение, клики, заполнение форм. Работает без GUI — идеально для серверов. | [Подробнее ↓](#browser-cdp) |
+**[Русский](README.ru.md)**
 
 ---
 
-## 🚀 Быстрая установка
+## 📦 What's Inside
 
-### Вариант 1: Через агента (рекомендуется)
+### Skills
 
-Попроси своего OpenClaw агента:
+| Skill | Description | Install |
+|-------|-------------|---------|
+| **browser-cdp** | Headless browser via CDP (Chrome DevTools Protocol). Navigation, screenshots, JS execution, clicks, form filling. No GUI needed — perfect for servers. [Details ↓](#browser-cdp) | [SKILL.md](skills/browser-cdp/SKILL.md) |
 
-> «Клонируй `https://github.com/Datin887/openclaw-toolkit.git`, посмотри список навыков и установи нужные»
+---
 
-Агент сам разберётся что к чему.
+## 🚀 Quick Install
 
-### Вариант 2: Вручную
+### Option 1: Via Agent (recommended)
+
+Ask your OpenClaw agent:
+
+> «Clone `https://github.com/Datin887/openclaw-toolkit.git`, list the available skills, and install the ones I need.»
+
+The agent will figure it out.
+
+### Option 2: Manual
 
 ```bash
-# 1. Клонируй репозиторий
+# 1. Clone
 git clone https://github.com/Datin887/openclaw-toolkit.git
 
-# 2. Скопируй нужный навык в plugin-skills
+# 2. Copy the skill to your plugin-skills directory
 cp -r openclaw-toolkit/skills/browser-cdp ~/.openclaw/plugin-skills/
 
-# 3. Зарегистрируй навык в конфиге OpenClaw
-# Добавь в skills.entries и skills.load.extraDirs (см. документацию навыка)
+# 3. Register the skill in OpenClaw config
+# Add to skills.entries and skills.load.extraDirs (see skill docs)
 
-# 4. Перезапусти gateway
+# 4. Restart gateway
 openclaw gateway restart
 ```
 
 ---
 
-## 📋 Навыки
+## 📋 Skills
 
 ### browser-cdp
 
-**Headless browser automation через Chrome DevTools Protocol.**
+**Headless browser automation via Chrome DevTools Protocol.**
 
-**Что умеет:**
-- 🌐 Навигация по URL
-- 📸 Скриншоты страниц
-- ⚡ Выполнение JavaScript
-- 🖱️ Клики по элементам
-- ✏️ Заполнение форм
-- 📄 Извлечение контента страницы
-- 🔄 Управление вкладками
+**Features:**
+- 🌐 Navigate to URLs
+- 📸 Take screenshots
+- ⚡ Execute JavaScript
+- 🖱️ Click elements
+- ✏️ Fill forms
+- 📄 Extract page content
+- 🔄 Manage tabs
 
-**Требования:**
-- Chromium headless как systemd сервис (порт 9222)
-- Python пакет: `websocket-client`
+**Requirements:**
+- Chromium headless as a systemd service (port 9222)
+- Python package: `websocket-client`
 
-**Быстрый старт:**
+**Quick start:**
 ```bash
-# Запуск браузера
+# Start the browser
 sudo systemctl start chromium-headless
 
-# Навигация
+# Navigate
 python3 scripts/browser_cdp.py navigate "https://example.com"
 
-# Скриншот
+# Screenshot
 python3 scripts/browser_cdp.py screenshot /tmp/screenshot.png
 
-# JS-выполнение
+# Execute JS
 python3 scripts/browser_cdp.py evaluate "document.title"
 ```
 
-**Полная документация:** [skills/browser-cdp/SKILL.md](skills/browser-cdp/SKILL.md)
+**Full docs:** [skills/browser-cdp/SKILL.md](skills/browser-cdp/SKILL.md)
 
 ---
 
-## 📁 Структура
+## 📁 Structure
 
 ```
 openclaw-toolkit/
-├── README.md              ← Ты здесь
-├── skills/                ← Навыки для OpenClaw
+├── README.md              ← You are here
+├── README.ru.md           ← Russian version
+├── LICENSE
+├── skills/                ← OpenClaw skills
 │   └── browser-cdp/
 │       ├── SKILL.md
 │       └── scripts/
 │           └── browser_cdp.py
-├── scripts/               ← Вспомогательные скрипты
-├── configs/               ← Шаблоны конфигураций
-└── docs/                  ← Документация
+├── scripts/               ← Utility scripts
+├── configs/               ← Config templates
+└── docs/                  ← Documentation
 ```
 
-## 📜 Лицензия
+## 🤝 Contributing
 
-MIT — делай что хочешь. Подробности в [LICENSE](LICENSE).
+Found a bug or have an idea? Open an issue or submit a PR. Skills, scripts, and configs are welcome.
+
+## 📜 License
+
+MIT — do whatever you want. See [LICENSE](LICENSE).
