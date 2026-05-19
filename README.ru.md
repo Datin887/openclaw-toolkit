@@ -11,6 +11,7 @@
 | Навык | Описание | Установка |
 |-------|----------|-----------|
 | **browser-cdp** | Headless браузер через CDP (Chrome DevTools Protocol). Навигация, скриншоты, JS-выполнение, клики, заполнение форм. Работает без GUI — идеально для серверов. | [Подробнее ↓](#browser-cdp) |
+| **nemotron-vision** | Мультимодальный анализ изображений через Nemotron-Omni. Анализ скриншотов, графиков, фото, документов. Извлечение текста, описание визуалов. | [Подробнее ↓](#nemotron-vision) |
 
 ### Темы (Themes)
 
@@ -84,6 +85,25 @@ python3 scripts/browser_cdp.py evaluate "document.title"
 
 **Полная документация:** [skills/browser-cdp/SKILL.md](skills/browser-cdp/SKILL.md)
 
+### nemotron-vision
+
+**Мультимодальный анализ изображений через Nemotron-Omni (бесплатно на OpenRouter).**
+
+**Возможности:**
+- 📊 Анализ графиков и диаграмм — извлечение значений, меток, трендов
+- 📸 Описание фотографий — объекты, сцены, люди
+- 📄 OCR документов — извлечение текста с сохранением структуры
+- 🖥️ Анализ UI-скриншотов — описание лейаута и элементов
+
+**Модель:** `nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free` (256K контекст)
+
+**Быстрый старт:**
+```bash
+python3 scripts/nemotron_vision.py chart.png "Опиши этот график" --lang ru
+```
+
+**Полная документация:** [skills/nemotron-vision/SKILL.md](skills/nemotron-vision/SKILL.md)
+
 ---
 
 ## 🎨 Темы
@@ -106,22 +126,39 @@ python3 scripts/browser_cdp.py evaluate "document.title"
 ```
 openclaw-toolkit/
 ├── README.md              ← English version
-├── README.ru.md           ← Ты здесь
-├── LICENSE
+├── README.ru.md           ← Ты здесь (русский)
+├── LICENSE                ← MIT License
+│
 ├── skills/                ← Навыки для OpenClaw
-│   └── browser-cdp/
-│       ├── SKILL.md
+│   ├── browser-cdp/       ← Headless браузер через CDP
+│   │   ├── SKILL.md       ← Документация навыка
+│   │   └── scripts/
+│   │       └── browser_cdp.py   ← CDP-хелпер (навигация, скриншоты, JS)
+│   └── nemotron-vision/   ← Мультимодальный анализ изображений
+│       ├── SKILL.md       ← Документация навыка
 │       └── scripts/
-│           └── browser_cdp.py
+│           └── nemotron_vision.py  ← CLI для анализа изображений
+│
 ├── themes/                ← Темы для Control UI
-│   └── laguna/
-│       ├── theme.json
-│       ├── theme.css
-│       └── INSTALL.md
+│   └── laguna/            ← Тема Laguna с tweakcn.com
+│       ├── theme.json     ← Оригинальный payload tweakcn
+│       ├── theme.css      ← CSS-переменные (светлая + тёмная)
+│       └── INSTALL.md     ← Инструкция по установке
+│
 ├── scripts/               ← Вспомогательные скрипты
 ├── configs/               ← Шаблоны конфигураций
-└── docs/                  ← Документация
+└── docs/                  ← Дополнительная документация
 ```
+
+### Описание директорий
+
+| Директория | Назначение |
+|------------|------------|
+| `skills/` | Навыки для OpenClaw — каждая подпапка это самодостаточный навык с `SKILL.md` и скриптами |
+| `themes/` | Темы для Control UI — JSON/CSS темы для веб-интерфейса OpenClaw |
+| `scripts/` | Автономные скрипты (статус агента, сборщики логов, утилиты) |
+| `configs/` | Шаблоны конфигураций и примеры настройки OpenClaw |
+| `docs/` | Дополнительная документация, гайды и заметки |
 
 ## 📜 Лицензия
 

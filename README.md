@@ -133,23 +133,40 @@ See [INSTALL.md](themes/laguna/INSTALL.md) for manual options.
 
 ```
 openclaw-toolkit/
-├── README.md              ← You are here
+├── README.md              ← You are here (English)
 ├── README.ru.md           ← Russian version
-├── LICENSE
-├── skills/                ← OpenClaw skills
-│   └── browser-cdp/
-│       ├── SKILL.md
+├── LICENSE                ← MIT License
+│
+├── skills/                ← OpenClaw agent skills
+│   ├── browser-cdp/       ← Headless browser automation via CDP
+│   │   ├── SKILL.md       ← Skill documentation
+│   │   └── scripts/
+│   │       └── browser_cdp.py   ← CDP helper (navigate, screenshot, evaluate JS)
+│   └── nemotron-vision/   ← Multimodal image analysis via Nemotron-Omni
+│       ├── SKILL.md       ← Skill documentation
 │       └── scripts/
-│           └── browser_cdp.py
+│           └── nemotron_vision.py  ← CLI for image analysis (charts, photos, OCR)
+│
 ├── themes/                ← Control UI themes
-│   └── laguna/
-│       ├── theme.json
-│       ├── theme.css
-│       └── INSTALL.md
-├── scripts/               ← Utility scripts
-├── configs/               ← Config templates
-└── docs/                  ← Documentation
+│   └── laguna/            ← Laguna theme from tweakcn.com
+│       ├── theme.json     ← Original tweakcn payload (source of truth)
+│       ├── theme.css      ← Converted CSS custom properties (light + dark)
+│       └── INSTALL.md     ← Installation instructions
+│
+├── scripts/               ← Utility scripts (agent status, collectors, etc.)
+├── configs/               ← Config templates and examples
+└── docs/                  ← Additional documentation
 ```
+
+### Directory Descriptions
+
+| Directory | Purpose |
+|-----------|---------|
+| `skills/` | OpenClaw agent skills — each subfolder is a self-contained skill with `SKILL.md` and optional scripts |
+| `themes/` | Control UI themes — JSON/CSS themes for OpenClaw webchat interface |
+| `scripts/` | Standalone utility scripts (agent status, log collectors, helpers) |
+| `configs/` | Configuration templates and examples for OpenClaw setup |
+| `docs/` | Additional documentation, guides, and notes |
 
 ## 🤝 Contributing
 
