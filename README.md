@@ -13,6 +13,7 @@
 | Skill | Description | Install |
 |-------|-------------|---------|
 | **browser-cdp** | Headless browser via CDP (Chrome DevTools Protocol). Navigation, screenshots, JS execution, clicks, form filling. No GUI needed — perfect for servers. [Details ↓](#browser-cdp) | [SKILL.md](skills/browser-cdp/SKILL.md) |
+| **nemotron-vision** | Multimodal image analysis via Nemotron-Omni. Analyze screenshots, charts, photos, documents. Extract text, describe visuals, read diagrams. [Details ↓](#nemotron-vision) | [SKILL.md](skills/nemotron-vision/SKILL.md) |
 
 ### Themes
 
@@ -85,6 +86,27 @@ python3 scripts/browser_cdp.py evaluate "document.title"
 ```
 
 **Full docs:** [skills/browser-cdp/SKILL.md](skills/browser-cdp/SKILL.md)
+
+### nemotron-vision
+
+**Multimodal image analysis via Nemotron-Omni (free on OpenRouter).**
+
+**Features:**
+- 📊 Chart & graph analysis — extract values, labels, trends
+- 📸 Photo description — objects, scenes, people
+- 📄 Document OCR — extract text preserving structure
+- 🖥️ UI screenshot analysis — describe layouts and elements
+
+**Model:** `nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free` (256K context)
+
+**Quick start:**
+```bash
+python3 scripts/nemotron_vision.py chart.png "Describe this chart" --lang ru
+```
+
+Or via `image` tool with model override.
+
+**Full docs:** [skills/nemotron-vision/SKILL.md](skills/nemotron-vision/SKILL.md)
 
 ---
 
